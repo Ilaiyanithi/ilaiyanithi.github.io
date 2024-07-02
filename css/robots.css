@@ -1,7 +1,7 @@
 /* Styles for the Robots.txt Checker */
 body {
     font-family: 'Comic Sans MS', cursive, sans-serif;
-    background-color: #f0f8ff;
+    background-color: #e8f5e9;
     margin: 0;
     display: flex;
     justify-content: center;
@@ -11,10 +11,12 @@ body {
 
 .container {
     text-align: center;
-    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+    background: linear-gradient(135deg, #a5d6a7 0%, #66bb6a 100%);
     padding: 50px;
     border-radius: 15px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 500px;
 }
 
 h1 {
@@ -38,15 +40,15 @@ input[type="text"] {
 
 input[type="text"]:focus {
     outline: none;
-    border-color: #ffa500;
-    box-shadow: 0 0 10px rgba(255, 165, 0, 0.5);
+    border-color: #4caf50;
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
 }
 
 button {
     padding: 15px 30px;
     border: none;
     border-radius: 25px;
-    background-color: #ff6347;
+    background-color: #388e3c;
     color: #ffffff;
     font-size: 1.5em;
     cursor: pointer;
@@ -54,8 +56,8 @@ button {
 }
 
 button:hover {
-    background-color: #ff4500;
-    box-shadow: 0 5px 10px rgba(255, 69, 0, 0.2);
+    background-color: #2e7d32;
+    box-shadow: 0 5px 10px rgba(46, 125, 50, 0.2);
 }
 
 p {
@@ -65,4 +67,25 @@ p {
     background: rgba(0, 0, 0, 0.1);
     padding: 20px;
     border-radius: 15px;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        font-size: 1em;
+    }
+
+    button {
+        font-size: 1.2em;
+        padding: 10px 20px;
+    }
+
+    p {
+        font-size: 1.2em;
+    }
 }
