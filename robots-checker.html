@@ -13,17 +13,24 @@
 
     <script>
         async function checkRobotsTxt() {
-            const urlInput = document.getElementById('urlInput').value;
+            let urlInput = document.getElementById('urlInput').value.trim();
             const resultElement = document.getElementById('result');
+
+            // Ensure the URL starts with 'http://' or 'https://'
+            if (!urlInput.startsWith('http://') && !urlInput.startsWith('https://')) {
+                urlInput = 'https://' + urlInput;
+            }
 
             try {
                 const response = await fetch(`${urlInput}/robots.txt`);
+                console.log(response);
                 if (response.ok) {
                     resultElement.textContent = `The website ${urlInput} has a robots.txt file.`;
                 } else {
                     resultElement.textContent = `The website ${urlInput} does not have a robots.txt file.`;
                 }
             } catch (error) {
+                console.error(error);
                 resultElement.textContent = `An error occurred: ${error.message}`;
             }
         }
