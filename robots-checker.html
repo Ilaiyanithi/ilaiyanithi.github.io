@@ -25,18 +25,30 @@
             }
 
             try {
-                const response = await fetch(`${urlInput}/robots.txt`, { mode: 'no-cors' });
+                const response = await fetch(`${urlInput}/robots.txt`);
 
-                if (response.type === 'opaque') {
-                    resultElement.textContent = `The website ${urlInput} has a robots.txt file (but we can't read it due to CORS restrictions).`;
-                } else if (response.ok) {
+                if (response.ok) {
                     resultElement.textContent = `The website ${urlInput} has a robots.txt file.`;
                 } else {
                     resultElement.textContent = `The website ${urlInput} does not have a robots.txt file.`;
                 }
             } catch (error) {
-                console.error(error);
-                resultElement.textContent = `An error occurred: ${error.message}`;
+                if (error.name === 'TypeError') {
+                    // Network errors will result in a TypeError
+                    try {
+                        const response = await fetch(`${urlInput}/robots.txt`, { mode: 'no-cors' });
+
+                        if (response.type === 'opaque') {
+                            resultElement.textContent = `The website ${urlInput} has a robots.txt file (but we can't read it due to CORS restrictions).`;
+                        } else {
+                            resultElement.textContent = `The website ${urlInput} does not have a robots.txt file.`;
+                        }
+                    } catch (corsError) {
+                        resultElement.textContent = `An error occurred: ${corsError.message}`;
+                    }
+                } else {
+                    resultElement.textContent = `An error occurred: ${error.message}`;
+                }
             }
         }
     </script>
