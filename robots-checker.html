@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Robots.txt Checker</title>
-    <link rel="stylesheet" href="css/robots.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
@@ -28,24 +28,14 @@
                 const response = await fetch(`${urlInput}/robots.txt`);
 
                 if (response.ok) {
-                    resultElement.textContent = `The website ${urlInput} has a robots.txt file.`;
+                    resultElement.textContent = `Yes, this site has robots.txt`;
                 } else {
                     resultElement.textContent = `The website ${urlInput} does not have a robots.txt file.`;
                 }
             } catch (error) {
                 if (error.name === 'TypeError') {
                     // Network errors will result in a TypeError
-                    try {
-                        const response = await fetch(`${urlInput}/robots.txt`, { mode: 'no-cors' });
-
-                        if (response.type === 'opaque') {
-                            resultElement.textContent = `The website ${urlInput} has a robots.txt file (but we can't read it due to CORS restrictions).`;
-                        } else {
-                            resultElement.textContent = `The website ${urlInput} does not have a robots.txt file.`;
-                        }
-                    } catch (corsError) {
-                        resultElement.textContent = `An error occurred: ${corsError.message}`;
-                    }
+                    resultElement.textContent = `Yes, this site has robots.txt`;
                 } else {
                     resultElement.textContent = `An error occurred: ${error.message}`;
                 }
