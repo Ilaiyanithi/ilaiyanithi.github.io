@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Robots.txt Checker</title>
-    <link rel="stylesheet" href="css/robots.css">
+    <link rel="stylesheet" href="cas/robots.css">
 </head>
 <body>
-    <h1>Robots.txt Checker</h1>
-    <input type="text" id="urlInput" placeholder="Enter website URL">
-    <button onclick="checkRobotsTxt()">Check</button>
-    <p id="result"></p>
+    <div class="container">
+        <h1>Robots.txt Checker</h1>
+        <input type="text" id="urlInput" placeholder="Enter website URL">
+        <button onclick="checkRobotsTxt()">Check</button>
+        <p id="result"></p>
+    </div>
 
     <script>
         async function checkRobotsTxt() {
@@ -22,8 +24,12 @@
                 urlInput = 'https://' + urlInput;
             }
 
+            // Using a CORS proxy for testing purposes
+            const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
+            const targetUrl = `${urlInput}/robots.txt`;
+
             try {
-                const response = await fetch(`${urlInput}/robots.txt`);
+                const response = await fetch(proxyUrl + targetUrl);
                 console.log(response);
                 if (response.ok) {
                     resultElement.textContent = `The website ${urlInput} has a robots.txt file.`;
