@@ -24,14 +24,12 @@
                 urlInput = 'https://' + urlInput;
             }
 
-            // Using a CORS proxy for testing purposes
-            const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
-            const targetUrl = `${urlInput}/robots.txt`;
-
             try {
-                const response = await fetch(proxyUrl + targetUrl);
-                console.log(response);
-                if (response.ok) {
+                const response = await fetch(`${urlInput}/robots.txt`, { mode: 'no-cors' });
+
+                if (response.type === 'opaque') {
+                    resultElement.textContent = `The website ${urlInput} has a robots.txt file (but we can't read it due to CORS restrictions).`;
+                } else if (response.ok) {
                     resultElement.textContent = `The website ${urlInput} has a robots.txt file.`;
                 } else {
                     resultElement.textContent = `The website ${urlInput} does not have a robots.txt file.`;
