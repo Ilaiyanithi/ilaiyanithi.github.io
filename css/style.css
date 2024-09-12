@@ -411,6 +411,10 @@ header .get a {
   font-family: "Inter", sans-serif;
   gap: 10px;
 }
+
+.name img {
+  width: 40px;
+}
 .name span {
   color: #55E6A5;
   font-family: "Paytone One", sans-serif;
