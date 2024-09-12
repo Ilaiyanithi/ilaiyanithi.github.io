@@ -322,27 +322,70 @@ header .get a {
   margin-right: 10px; /* Add margin between image and text */
 }
 
+
 .whoami {
-  color: white;
-  display: flex;
-  align-items: center;
-  font-family: "Inter", sans-serif;
+    display: flex;
+    align-items: flex-start;
+    padding: 40px 20px 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: white;
 }
-.whoami .brand img {
-  height: auto;
+
+.brand {
+    flex: 0 0 200px;
+    margin-right: 70px;
+    margin-top: 70px;
 }
-.whoami .me h1 {
-  color: #55E6A5;
-  font-family: "Paytone One", sans-serif;
+
+.brand img {
+    max-width: 100%;
+    height: auto;
 }
-.whoami .me h5 {
-  font-size: 15px;
-  margin-top: 18px;
+
+.me {
+    flex: 1;
 }
-.whoami .me p {
-  max-width: 500px;
-  text-align: auto;
+
+.me h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
 }
+
+.me h5 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.me p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+
+.me p br {
+    display: none;
+}
+
+.me p::after {
+    content: "";
+    width: 50px;
+    height: 2px;
+    background-color: white;
+    margin: 10px 0;
+}
+
+.me img {
+    max-width: 150px;
+    height: auto;
+    margin-top: 20px;
+}
+
 
 .con2 {
   display: flex;
@@ -404,16 +447,16 @@ header .get a {
   background-color: #0A1019;
 }
 
+.name img {
+    width: 40px;
+}
+
 .name {
   color: white;
   display: flex;
   margin: 1em;
   font-family: "Inter", sans-serif;
   gap: 10px;
-}
-
-.name img {
-  width: 40px;
 }
 .name span {
   color: #55E6A5;
@@ -655,21 +698,36 @@ header .get a {
   .right button {
     margin-bottom: 20px; /* Increase margin between input elements for mobile */
   }
+
   .whoami {
-    display: block;
+    flex-direction: column;
     align-items: center;
-    text-align: center;
-  }
-  .whoami .brand img {
-    width: 350px;
-  }
-  .whoami .me h1 {
-    font-size: 20px;
-  }
-  .whoami .me p {
-    text-align: center;
-    font-size: 13px;
-  }
+}
+
+    .brand {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .brand img {
+        width: 300px;
+    }
+
+    .me {
+        text-align: center;
+    }
+
+    .me h1 {
+        font-size: 2rem;
+    }
+
+    .me h5 {
+        font-size: 1rem;
+    }
+
+    .me p {
+        font-size: 0.9rem;
+    }
   .con2 {
     display: block;
     padding: 10px; /* Adjust the padding */
@@ -710,7 +768,7 @@ header .get a {
     padding: 10px;
   }
   .footer .name img {
-    max-width: 40px; /* Adjust image size if needed */
+    width: 40px; /* Adjust image size if needed */
     gap: 12px;
   }
   .footer .name h2 {
