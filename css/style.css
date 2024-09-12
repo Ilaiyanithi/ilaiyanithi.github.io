@@ -710,7 +710,7 @@ header .get a {
     padding: 10px;
   }
   .footer .name img {
-    max-width: 80px; /* Adjust image size if needed */
+    max-width: 40px; /* Adjust image size if needed */
     gap: 12px;
   }
   .footer .name h2 {
