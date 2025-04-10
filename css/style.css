@@ -595,10 +595,24 @@ header .get a {
     width: 40px;
     height: 50px;
   }
+  header .get {
+    z-index: 20;
+  }
   .navbar-icon {
+    display: block;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    z-index: 100; /* Show the navbar icon for mobile devices */
+  }
+  .navbar-close {
+    display: none;
+    top: 20px;
+    right: 20px;
     width: 30px;
     height: 30px;
-    display: block; /* Show the navbar icon for mobile devices */
+    cursor: pointer;
+    z-index: 100;
   }
 
   .nav-links {
@@ -611,7 +625,7 @@ header .get a {
     right: 0;
     text-align: center;
     z-index: 10;
-    width: 100vw;
+
     padding: 20px 0;
   }
   .nav-links.show {

@@ -40,24 +40,6 @@
       </header>
     </div>
 
-    <script>
-      const navbarIcon = document.querySelector(".navbar-icon");
-      const navbarClose = document.querySelector(".navbar-close");
-      const navLinks = document.querySelector(".nav-links");
-
-      navbarIcon.onclick = function () {
-        navLinks.classList.add("show");
-        navbarIcon.style.display = "none";
-        navbarClose.style.display = "block";
-      };
-
-      navbarClose.onclick = function () {
-        navLinks.classList.remove("show");
-        navbarClose.style.display = "none";
-        navbarIcon.style.display = "block";
-      };
-    </script>
-
     <div class="hero">
       <img src="assets/hero-bg.png" alt="HeroImage" />
       <div class="hero-text">
@@ -340,5 +322,22 @@
         </div>
       </section>
     </section>
+    <script>
+      const navbarIcon = document.querySelector(".navbar-icon");
+      const navbarClose = document.querySelector(".navbar-close");
+      const navLinks = document.querySelector(".nav-links");
+
+      navbarIcon.onclick = function () {
+        navLinks.classList.add("show");
+        navbarIcon.style.display = "none";
+        navbarClose.style.display = "block";
+      };
+
+      navbarClose.onclick = function () {
+        navLinks.classList.remove("show");
+        navbarClose.style.display = "none";
+        navbarIcon.style.display = "block";
+      };
+    </script>
   </body>
 </html>
