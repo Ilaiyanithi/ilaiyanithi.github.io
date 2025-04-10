@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Paytone+One&display=swap");
 body {
-  background: linear-gradient(180deg, #02050A 12.06%, #000000 131.11%);
+  background: linear-gradient(180deg, #02050a 12.06%, #000000 131.11%);
   margin: 0;
   padding: 0;
 }
@@ -17,9 +17,9 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  left: 0;
+
   right: 0;
-  top: 0;
+
   padding: 10px 20px;
 }
 header .logo1 {
@@ -31,7 +31,7 @@ header .logo1 {
   font-family: "Paytone One", sans-serif;
 }
 header .logo1 span {
-  color: #55E6A5;
+  color: #55e6a5;
 }
 header .logo1 img {
   width: 31px;
@@ -55,7 +55,7 @@ header .nav-links li a:hover {
 }
 header button {
   font-family: "Inter", sans-serif;
-  background-color: #55E6A5;
+  background-color: #55e6a5;
   border: none;
   border-radius: 5px;
   height: 30px;
@@ -64,6 +64,34 @@ header button {
 header .get a {
   color: black;
   text-decoration: none;
+}
+
+.email-form {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* centers the whole form */
+  gap: 10px; /* this defines exact space between input and button */
+  flex-wrap: wrap;
+}
+
+.email-form input[type="text"] {
+  padding: 10px 15px;
+  background-color: white;
+  color: black;
+  border: none;
+  cursor: pointer;
+}
+
+.email-form button {
+  padding: 10px 16px;
+  background-color: #55e6a5;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap;
 }
 
 .hero {
@@ -77,15 +105,22 @@ header .get a {
   position: absolute; /* Set position to absolute */
   top: 50%; /* Align the top of the div to the vertical center */
   left: 50%; /* Align the left side of the div to the horizontal center */
-  transform: translate(-50%, -50%); /* Adjust position to center both horizontally and vertically */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Adjust position to center both horizontally and vertically */
   text-align: center; /* Center-align text within the div */
   color: white; /* Set text color */
-  margin-top: 80px;
+
+  padding: 10px;
+  z-index: 2;
+  width: 100%;
+  max-width: 800px;
 }
 .hero h1 {
   font-family: "Paytone One", sans-serif;
   font-size: 2.5em;
-  color: #55E6A5;
+  color: #55e6a5;
 }
 .hero p {
   font-size: 1.2em;
@@ -93,23 +128,27 @@ header .get a {
   font-family: "Inter", sans-serif;
   text-align: auto;
 }
-.hero .hero-text input[type=text],
+.hero .hero-text input[type="text"],
 .hero .hero-text button {
-  margin-top: 20px; /* Add some spacing between input and button */
+  display: flex;
+
+  margin: 10px; /* Add some spacing between input and button */
   padding: 10px 20px; /* Add padding to input and button */
   border: none; /* Remove border */
   border-radius: 5px; /* Apply border-radius */
 }
-.hero .hero-text input[type=text] {
-  width: 300px; /* Set width for the input */
+.hero .hero-text input[type="text"] {
+  width: 500px;
+  max-width: 550px;
+  /* width: 300px; Set width for the input */
 }
 .hero .hero-text button {
-  background-color: #55E6A5; /* Set background color */
+  background-color: #55e6a5; /* Set background color */
   color: black; /* Set text color */
   cursor: pointer; /* Set cursor to pointer on hover */
 }
 .hero .hero-text button:hover {
-  background-color: #55E6A5; /* Change background color on hover */
+  background-color: #55e6a5; /* Change background color on hover */
 }
 
 .sec1 {
@@ -121,7 +160,7 @@ header .get a {
 }
 
 .first {
-  color: #55E6A5;
+  color: #55e6a5;
   font-family: "Paytone One", sans-serif;
   font-size: 20px;
   max-width: 360px;
@@ -163,7 +202,7 @@ header .get a {
 
 .icon h3 {
   font-family: "Inter", sans-serif;
-  color: #55E6A5;
+  color: #55e6a5;
   margin: 0;
 }
 
@@ -182,7 +221,6 @@ header .get a {
 }
 
 .grid {
-  margin: 5em;
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
   gap: 60px; /* Adds a gap between grid items */
@@ -194,7 +232,7 @@ header .get a {
   width: 250px;
   height: 320px;
   padding: 20px; /* Add padding inside the box */
-  background-color: #55E6A5; /* Set background color */
+  background-color: #55e6a5; /* Set background color */
 }
 
 .box h2 {
@@ -217,7 +255,7 @@ header .get a {
   text-align: center;
 }
 .connect h1 {
-  color: #55E6A5;
+  color: #55e6a5;
   font-family: "Paytone One", sans-serif;
 }
 .connect p {
@@ -240,7 +278,7 @@ header .get a {
   position: absolute;
   width: 350px;
   left: 200px;
-  border: 0.5px solid #FFFFFF;
+  border: 0.5px solid #ffffff;
 }
 
 .left,
@@ -272,7 +310,7 @@ header .get a {
   height: 470px;
   margin-bottom: 80px;
   left: calc(60% - 30.5px); /* Center horizontally */
-  background: #0A1019;
+  background: #0a1019;
   z-index: -1;
   border-radius: 10px;
 }
@@ -283,8 +321,8 @@ header .get a {
   background-color: white;
 }
 
-.right input[type=text],
-.right input[type=email],
+.right input[type="text"],
+.right input[type="email"],
 .right button {
   width: 100%; /* Set the width to fill the container */
   padding: 10px; /* Add padding */
@@ -295,7 +333,7 @@ header .get a {
 }
 
 .right button {
-  background-color: #55E6A5; /* Set background color */
+  background-color: #55e6a5; /* Set background color */
   color: black; /* Set text color */
   cursor: pointer; /* Change cursor to pointer on hover */
   transition: background-color 0.3s; /* Add transition for smoother hover effect */
@@ -322,83 +360,81 @@ header .get a {
   margin-right: 10px; /* Add margin between image and text */
 }
 
-
 .whoami {
-    display: flex;
-    align-items: flex-start;
-    padding: 40px 20px 50px;
-    max-width: 1200px;
-    margin: 0 auto;
-    color: white;
+  display: flex;
+  align-items: flex-start;
+  padding: 40px 20px 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: white;
 }
 
 .brand {
-    flex: 0 0 200px;
-    margin-right: 70px;
-    margin-top: 70px;
+  flex: 0 0 200px;
+  margin-right: 70px;
+  margin-top: 70px;
 }
 
 .brand img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 .me {
-    flex: 1;
+  flex: 1;
 }
 
 .me h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
 }
 
 .me h5 {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
 }
 
 .me p {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 20px;
-    max-width: 600px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: left;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
 }
 
 .me p br {
-    display: none;
+  display: none;
 }
 
 .me p::after {
-    content: "";
-    width: 50px;
-    height: 2px;
-    background-color: white;
-    margin: 10px 0;
+  content: "";
+  width: 50px;
+  height: 2px;
+  background-color: white;
+  margin: 10px 0;
 }
 
 .me img {
-    max-width: 150px;
-    height: auto;
-    margin-top: 20px;
+  max-width: 150px;
+  height: auto;
+  margin-top: 20px;
 }
-
 
 .con2 {
   display: flex;
   color: white;
   text-align: center;
   -moz-column-gap: 80px;
-       column-gap: 80px;
+  column-gap: 80px;
   align-items: center;
   padding: 90px 170px;
   font-family: "Inter", sans-serif;
 }
 .con2 h2 {
-  color: #55E6A5;
+  color: #55e6a5;
 }
 .con2 p {
   max-width: 500px;
@@ -419,7 +455,10 @@ header .get a {
   position: absolute; /* Set position to absolute */
   top: 50%; /* Align the top of the div to the vertical center */
   left: 50%; /* Align the left side of the div to the horizontal center */
-  transform: translate(-50%, -50%); /* Adjust position to center both horizontally and vertically */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Adjust position to center both horizontally and vertically */
   text-align: center; /* Center-align text within the div */
   color: white; /* Set text color */
   margin-top: 80px;
@@ -427,11 +466,11 @@ header .get a {
 .join h1 {
   font-family: "Paytone One", sans-serif;
   font-size: 2.5em;
-  color: #55E6A5;
+  color: #55e6a5;
   max-width: 550px;
 }
 .join button {
-  background-color: #55E6A5;
+  background-color: #55e6a5;
   color: black;
   width: 120px;
   height: 40px;
@@ -444,11 +483,11 @@ header .get a {
 }
 
 .sad {
-  background-color: #0A1019;
+  background-color: #0a1019;
 }
 
 .name img {
-    width: 40px;
+  width: 40px;
 }
 
 .name {
@@ -459,7 +498,7 @@ header .get a {
   gap: 10px;
 }
 .name span {
-  color: #55E6A5;
+  color: #55e6a5;
   font-family: "Paytone One", sans-serif;
 }
 
@@ -507,7 +546,7 @@ header .get a {
 }
 
 .socials {
-  background-color: #0A1019;
+  background-color: #0a1019;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -515,9 +554,36 @@ header .get a {
   padding: 20px;
   font-family: "Inter", sans-serif;
 }
+.hero-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+}
 
 /* Media Query for Mobile Screens (max-width: 767px) */
 @media only screen and (max-width: 768px) {
+  body,
+  html {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+  }
+  .email-form {
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+  }
+
+  .email-form input[type="text"] {
+    width: 100px;
+    max-width: 200px;
+  }
+
+  .email-form button {
+    padding: 10px 14px;
+  }
+
   .logo1 {
     display: flex;
   }
@@ -549,6 +615,9 @@ header .get a {
     transition: height 0.5s ease, opacity 0.5s ease; /* Add transition for height and opacity */
     height: 0;
     opacity: 0;
+    transition: max-height 0.3s ease-in-out;
+    overflow: hidden;
+    max-height: 0;
   }
   .nav-links.show {
     display: flex; /* Show nav links when class 'show' is applied */
@@ -556,6 +625,7 @@ header .get a {
     transition: height 0.5s ease, opacity 0.5s ease; /* Add transition for height and opacity */
     height: auto;
     opacity: 1;
+    max-height: 400px;
   }
   .get a {
     font-size: 10px;
@@ -588,29 +658,42 @@ header .get a {
   }
   .hero-text {
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    z-index: 2;
+    width: 100%;
     color: white;
-    margin-top: 40px; /* Decreased margin for mobile */
+    /*Decreased margin for mobile*/
+    font-size: 14px;
+    max-width: 90%;
   }
   .hero-text h1 {
+    margin-top: 55px;
     font-family: "Paytone One", sans-serif;
     font-size: 20px; /* Reduced font size for mobile */
-    color: #55E6A5;
+    color: #55e6a5;
   }
   .hero-text p {
-    font-size: 12px; /* Reduced font size for mobile */
-    line-height: 1.5; /* Adjusted line height for mobile */
+    /* font-size: 12px; Reduced font size for mobile */
+    line-height: 1.6; /* Adjusted line height for mobile */
     font-family: "Inter", sans-serif;
     text-align: center; /* Center-align text for mobile */
+
+    font-size: 14px;
+    padding: 0 10px;
   }
-  .hero-text input {
-    max-width: -moz-fit-content;
-    max-width: fit-content;
-    margin-bottom: 100px;
-    height: 10px;
+  .hero .hero-text input[type="text"] {
+    width: 200px;
+    max-width: 300px;
+    height: 30px;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
   }
   .hero-text button {
     font-size: 12px;
@@ -621,6 +704,7 @@ header .get a {
     margin-bottom: 20px;
   }
   .sec1 .first h1 {
+    margin-top: 70px;
     font-size: 17px;
     text-align: center;
   }
@@ -652,8 +736,8 @@ header .get a {
   .box {
     width: 120px;
     height: 180px;
-    padding: 20px; /* Add padding inside the box */
-    background-color: #55E6A5; /* Set background color */
+    padding: 30px; /* Add padding inside the box */
+    background-color: #55e6a5; /* Set background color */
   }
   .box h2 {
     font-family: "Inter", sans-serif;
@@ -702,38 +786,38 @@ header .get a {
   .whoami {
     flex-direction: column;
     align-items: center;
-}
+  }
 
-    .brand {
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
+  .brand {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
 
-    .brand img {
-        width: 300px;
-    }
+  .brand img {
+    width: 300px;
+  }
 
-    .me {
-        text-align: center;
-    }
+  .me {
+    text-align: center;
+  }
 
-    .me h1 {
-        font-size: 2rem;
-    }
+  .me h1 {
+    font-size: 2rem;
+  }
 
-    .me h5 {
-        font-size: 1rem;
-    }
+  .me h5 {
+    font-size: 1rem;
+  }
 
-    .me p {
-        font-size: 0.9rem;
-    }
+  .me p {
+    font-size: 0.9rem;
+  }
   .con2 {
     display: block;
     padding: 10px; /* Adjust the padding */
   }
   .con2 h2 {
-    color: #55E6A5;
+    color: #55e6a5;
     font-size: 18px;
   }
   .con2 p {
@@ -828,4 +912,4 @@ header .get a {
   .socials .social-img img {
     max-width: 40px; /* Adjust image size if needed */
   }
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */
