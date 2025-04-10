@@ -600,24 +600,19 @@ header .get a {
     height: 30px;
     display: block; /* Show the navbar icon for mobile devices */
   }
+
   .nav-links {
-    display: none; /* Hide the nav links by default on mobile */
-    background-color: black; /* Set background color for mobile nav */
+    display: none;
+    flex-direction: column;
+    background-color: black;
     position: absolute;
-    font-size: 2em;
     top: 70px;
     left: 0;
     right: 0;
-    width: 100vw;
     text-align: center;
     z-index: 10;
-    overflow: hidden;
-    transition: height 0.5s ease, opacity 0.5s ease; /* Add transition for height and opacity */
-    height: 0;
-    opacity: 0;
-    transition: max-height 0.3s ease-in-out;
-    overflow: hidden;
-    max-height: 0;
+    width: 100vw;
+    padding: 20px 0;
   }
   .nav-links.show {
     display: flex; /* Show nav links when class 'show' is applied */
