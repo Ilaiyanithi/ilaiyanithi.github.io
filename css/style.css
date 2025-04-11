@@ -4,6 +4,12 @@ body {
   margin: 0;
   padding: 0;
 }
+.title-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
 
 .navbar-icon {
   display: none;
