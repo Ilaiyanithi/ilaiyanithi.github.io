@@ -7,19 +7,24 @@ body {
 
 .navbar-icon {
   display: none;
+  margin-right: 20px;
 }
 
 .navbar-close {
   display: none;
+  margin-right: 20px;
 }
-
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  position: fixed;
+  top: 0;
+  left: 0;
   right: 0;
-
+  width: 100%;
+  z-index: 100; /* ensures it's above other elements */
+  background-color: black;
   padding: 10px 20px;
 }
 header .logo1 {
@@ -96,6 +101,7 @@ header .get a {
 
 .hero {
   position: relative;
+  margin-top: 80px;
 }
 .hero img {
   width: 100%;
@@ -660,6 +666,7 @@ header .get a {
   }
   .hero {
     position: relative;
+    margin-top: 100px;
   }
   .hero img {
     width: 100%;
@@ -743,9 +750,9 @@ header .get a {
     padding-left: 20px;
   }
   .box {
-    width: 120px;
+    width: 100px;
     height: 180px;
-    padding: 30px; /* Add padding inside the box */
+    padding: 28px; /* Add padding inside the box */
     background-color: #55e6a5; /* Set background color */
   }
   .box h2 {
