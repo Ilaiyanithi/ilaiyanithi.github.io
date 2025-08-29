@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume - Hari Krishnan S (Single Page / Printable)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    * { 
+      -webkit-print-color-adjust: exact !important; 
+      print-color-adjust: exact !important; 
+      color-adjust: exact !important;
+    }
+    
+    @page { 
+      size: A4; 
+      margin: 10mm; 
+    }
+
+    .a4 {
+      width: 210mm;
+      min-height: 297mm;
+      max-width: 100%;
+    }
+
+    .no-break { 
+      page-break-inside: avoid; 
+      break-inside: avoid; 
+    }
+    
+    .tight p, .tight li { 
+      line-height: 1.4; 
+    }
+
+    .profile-photo {
+      width: 130px;
+      height: 130px;
+      object-fit: cover;
+      object-position: top center;
+      border: 4px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .section-divider {
+      height: 2px;
+      background: linear-gradient(90deg, #0f766e 0%, #14b8a6 100%);
+      margin: 16px 0;
+    }
+
+    .section-divider-right {
+      height: 2px;
+      background: linear-gradient(90deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.8) 100%);
+      margin: 16px 0;
+    }
+
+    .gradient-bg {
+      background: linear-gradient(135deg, #0f766e 0%, #14b8a6 50%, #0d9488 100%);
+    }
+
+    .skill-tag {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.15);
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin: 2px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .language-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      display: inline-block;
+      margin-left: 4px;
+    }
+
+    .language-dot.filled {
+      background: rgba(255, 255, 255, 0.9);
+    }
+
+    .language-dot.empty {
+      background: rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+    }
+
+    @media print {
+      html, body { 
+        height: auto; 
+        margin: 0;
+        padding: 0;
+      }
+      
+      body { 
+        background: white !important; 
+      }
+      
+      .shadow, .shadow-lg, .shadow-xl, .ring, .ring-1 { 
+        box-shadow: none !important; 
+      }
+      
+      .screen-only { 
+        display: none !important; 
+      }
+      
+      .print\:block { 
+        display: block !important; 
+      }
+      
+      .a4 { 
+        width: 190mm; 
+        min-height: auto; 
+        margin: 0;
+        box-shadow: none;
+        border-radius: 0;
+      }
+      
+      .gradient-bg {
+        background: #0f766e !important;
+      }
+      
+      .profile-photo {
+        border-color: rgba(255, 255, 255, 0.5) !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 p-4 print:p-0">
+  <div class="a4 mx-auto bg-white shadow-2xl overflow-hidden print:shadow-none">
+    <div class="grid grid-cols-3 gap-0 h-full">
+      <!-- Left Column (2/3) -->
+      <div class="col-span-2 p-8 tight no-break">
+        <!-- Header -->
+        <div class="no-break">
+          <h1 class="text-4xl font-bold text-gray-900 tracking-tight">HARI KRISHNAN S</h1>
+          <p class="text-teal-700 text-xl font-semibold mt-2">Software Engineer</p>
+          <div class="mt-4 text-[15px] text-gray-700 flex flex-wrap gap-x-4 gap-y-2 items-center">
+            <span class="flex items-center">
+              <svg class="w-4 h-4 mr-2 text-teal-600" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 011.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+              </svg>
+              9025449746
+            </span>
+            <span class="text-gray-300">|</span>
+            <span class="flex items-center">
+              <svg class="w-4 h-4 mr-2 text-teal-600" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+              </svg>
+              hk2862878@gmail.com
+            </span>
+            <span class="text-gray-300">|</span>
+            <span class="flex items-center">
+              <svg class="w-4 h-4 mr-2 text-teal-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+              </svg>
+              <a href="https://www.linkedin.com/in/hari-krishnan-s-/" class="text-teal-700 hover:underline">linkedin.com/in/hari-krishnan-s-/</a>
+            </span>
+            <span class="text-gray-300">|</span>
+            <span class="flex items-center">
+              <svg class="w-4 h-4 mr-2 text-teal-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+              </svg>
+              Theni
+            </span>
+          </div>
+        </div>
+
+        <!-- Summary -->
+        <div class="mt-5 no-break">
+          <h2 class="font-bold text-gray-800 text-sm uppercase tracking-wide">Summary</h2>
+          <div class="section-divider"></div>
+          <p class="text-[14px] text-gray-700 mt-2 leading-relaxed">
+            I'm excited to apply for this software engineer role because my experience in programming languages like Java and Python aligns with the responsibilities outlined in the posting. I am confident that my analytical mindset, attention to detail, and passion for solving complex problems will make me a strong asset to your team.
+          </p>
+        </div>
+
+        <!-- Education -->
+        <div class="mt-5 no-break">
+          <h2 class="font-bold text-gray-800 text-sm uppercase tracking-wide">Education</h2>
+          <div class="section-divider"></div>
+          <div class="mt-2">
+            <p class="text-[14px] text-gray-900 font-semibold">BE Computer Science and Engineering</p>
+            <p class="text-[14px] text-teal-700 font-medium">(2021 – 2025)</p>
+            <p class="text-[14px] text-gray-700">Anna University, MAM College of Engineering, Trichy</p>
+          </div>
+        </div>
+
+        <!-- Languages -->
+        <div class="mt-5 no-break">
+          <h2 class="font-bold text-gray-800 text-sm uppercase tracking-wide">Languages</h2>
+          <div class="section-divider"></div>
+          <div class="mt-2">
+            <div class="grid grid-cols-1 gap-2">
+              <div class="flex items-center justify-between">
+                <span class="text-[14px] text-gray-700">English – Advanced</span>
+                <div class="flex gap-1">
+                  <span class="w-2.5 h-2.5 rounded-full bg-teal-600"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-teal-600"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-teal-600"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-teal-600"></span>
+                  <span class="w-2.5 h-2.5 rounded-full border-2 border-teal-600 bg-transparent"></span>
+                </div>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-[14px] text-gray-700">Tamil – Native</span>
+                <div class="flex gap-1">
+                  <span class="w-2.5 h-2.5 rounded-full bg-teal-600"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-teal-600"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-teal-600"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-teal-600"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-teal-600"></span>
+                </div>
+              </div>
+              <div class="flex items-center justify-between">
+                <span class="text-[14px] text-gray-700">Telugu – Advanced</span>
+                <div class="flex gap-1">
+                  <span class="w-2.5 h-2.5 rounded-full bg-teal-600"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-teal-600"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-teal-600"></span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-teal-600"></span>
+                  <span class="w-2.5 h-2.5 rounded-full border-2 border-teal-600 bg-transparent"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Volunteering -->
+        <div class="mt-5 no-break">
+          <h2 class="font-bold text-gray-800 text-sm uppercase tracking-wide">Volunteering</h2>
+          <div class="section-divider"></div>
+          <div class="mt-2">
+            <p class="text-[14px] text-teal-700 font-semibold">Mamaria 2k24 – MAMCE</p>
+            <p class="text-[14px] text-gray-800 mt-1">Led communication standards for the college symposium.</p>
+          </div>
+        </div>
+
+        <!-- Professional Experience -->
+        <div class="mt-5 no-break">
+          <h2 class="font-bold text-gray-800 text-sm uppercase tracking-wide">Professional Experience</h2>
+          <div class="section-divider"></div>
+          <div class="mt-2">
+            <p class="text-[14px] text-teal-700 font-semibold"></p>
+            <p class="text-[14px] text-gray-900 font-medium">UI/UX Designer – Coimbatore</p>
+            <ul class="list-disc ml-6 text-[14px] text-gray-700 mt-2 space-y-1">
+              <li>Delivered UI design for Accoverse website.</li>
+              <li>Reviewed and improved multiple design specifications.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Find me online -->
+        <div class="mt-5 no-break">
+          <h2 class="font-bold text-gray-800 text-sm uppercase tracking-wide">Find Me Online</h2>
+          <div class="section-divider"></div>
+          <div class="flex flex-wrap gap-x-8 gap-y-2 mt-2 text-[14px] text-gray-700">
+            <a href="https://www.linkedin.com/in/hari-krishnan-s-171ab6330" class="text-teal-700 hover:underline font-medium">LinkedIn</a>
+            <span>Social Network – Username</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column (1/3) -->
+      <div class="col-span-1 gradient-bg text-white p-8 flex flex-col items-center no-break">
+        <!-- Profile Photo -->
+        <div class="text-center mb-6">
+          <img src="profile.jpeg" alt="Profile" class="profile-photo rounded-full mx-auto shadow-lg" />
+        </div>
+
+        <!-- Skills -->
+        <div class="w-full mt-4">
+          <h2 class="font-bold text-sm uppercase tracking-wide">Skills</h2>
+          <div class="section-divider-right"></div>
+          <div class="mt-4 space-y-2 text-[14px]">
+            <span class="skill-tag">CSS</span>
+            <span class="skill-tag">HTML</span>
+            <span class="skill-tag">Windows</span>
+          </div>
+        </div>
+
+
+
+        <!-- Strengths -->
+        <div class="w-full mt-5">
+          <h2 class="font-bold text-sm uppercase tracking-wide">Strengths</h2>
+          <div class="section-divider-right"></div>
+          <ul class="mt-3 space-y-2 text-[14px]">
+            <li class="leading-relaxed">Self‑motivated: enthusiastic and determined; fosters supportive environments.</li>
+            <li class="leading-relaxed">Communication: effective through workshops and team collaboration.</li>
+          </ul>
+        </div>
+
+        <!-- Training -->
+        <div class="w-full mt-5">
+          <h2 class="font-bold text-sm uppercase tracking-wide">Training & Courses</h2>
+          <div class="section-divider-right"></div>
+          <p class="mt-3 text-[14px] leading-relaxed">Pursuing UI/UX courses on Udemy</p>
+        </div>
+
+        <!-- Achievements -->
+        <div class="w-full mt-5">
+          <h2 class="font-bold text-sm uppercase tracking-wide">Key Achievements</h2>
+          <div class="section-divider-right"></div>
+          <p class="mt-3 text-[14px] leading-relaxed">Built a similar UI for the Accoverse personal site.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="screen-only max-w-3xl mx-auto mt-6 text-center text-sm text-gray-600 bg-white p-4 rounded-lg shadow">
+    <p class="font-semibold text-gray-800 mb-2">📄 Print Instructions:</p>
+    <p class="text-gray-700">Press <span class="font-semibold bg-gray-100 px-2 py-1 rounded">Ctrl+P</span> → Destination: <span class="font-semibold bg-gray-100 px-2 py-1 rounded">Save as PDF</span> → Layout: <span class="font-semibold bg-gray-100 px-2 py-1 rounded">Portrait</span> → Paper size: <span class="font-semibold bg-gray-100 px-2 py-1 rounded">A4</span> → Margins: <span class="font-semibold bg-gray-100 px-2 py-1 rounded">Default</span></p>
+  </div>
+</body>
+</html>
