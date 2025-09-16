@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Dharun Bar — Pre-order</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f1724, #0b3a4a);
+    color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  .container {
+    background: rgba(255, 255, 255, 0.06);
+    padding: 24px;
+    border-radius: 14px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.4);
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffb86b;
+  }
+  label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #9aa7b2;
+  }
+  select, button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 16px;
+    font-size: 15px;
+  }
+  select {
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+  }
+  option {
+    color: #000;
+  }
+  button {
+    background: linear-gradient(90deg, #ffb86b, #ff7c5a);
+    color: #06202b;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  button:hover {
+    opacity: 0.9;
+  }
+  .output {
+    margin-top: 20px;
+    background: rgba(255,255,255,0.08);
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 14px;
+    white-space: pre-line;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <h1>Dharun Bar — Pre-order</h1>
+    
+    <label for="name">Select Name</label>
+    <select id="name">
+      <option value="">-- Choose a name --</option>
+      <option>Ilaiyanithi The Lover Boy</option>
+      <option>Aravind The Actor</option>
+      <option>Partha Poondi King</option>
+      <option>Joshuva Homeless</option>
+      <option>Sridhar Keepalur Don</option>
+    </select>
+
+    <label for="drink">Select Drink</label>
+    <select id="drink">
+      <option value="">-- Choose a drink --</option>
+      <option>Tea</option>
+      <option>Coffee</option>
+      <option>Beer</option>
+      <option>King Louis</option>
+      <option>Old Monk</option>
+    </select>
+
+    <button id="orderBtn">Place Order</button>
+
+    <div id="result" class="output" style="display:none;"></div>
+  </div>
+
+<script>
+  document.getElementById("orderBtn").addEventListener("click", function() {
+    const name = document.getElementById("name").value;
+    const drink = document.getElementById("drink").value;
+    const resultBox = document.getElementById("result");
+
+    if (!name || !drink) {
+      resultBox.style.display = "block";
+      resultBox.textContent = "⚠️ Please select both name and drink.";
+      return;
+    }
+
+    const orderText = `🍻 Dharun Bar Order\n\nName: ${name}\nDrink: ${drink}\n\n✅ Order placed successfully!`;
+    resultBox.style.display = "block";
+    resultBox.textContent = orderText;
+  });
+</script>
+</body>
+</html>
