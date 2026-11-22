@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="rankGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" rx="30" fill="#18181b" />
+  <path d="M50 135 L80 100 L110 120 L150 65" fill="none" stroke="url(#rankGrad)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+  <polygon points="150,55 155,75 135,70" fill="#10b981" />
+  <text x="100" y="175" font-family="'Poppins', sans-serif" font-size="13" font-weight="600" fill="#f8fafc" text-anchor="middle">SEO &amp; YOUTUBE #1</text>
+</svg>
