@@ -693,6 +693,23 @@ img {
     -webkit-text-fill-color: transparent;
 }
 
+.hero-name-link {
+    text-decoration: none;
+    color: inherit;
+    background: inherit;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    transition: var(--transition-quick);
+    display: inline-block;
+}
+
+.hero-name-link:hover {
+    filter: brightness(1.25);
+    transform: translateY(-2px);
+}
+
 .hero-content h2 {
     font-size: 1.5rem;
     color: var(--secondary-color);
