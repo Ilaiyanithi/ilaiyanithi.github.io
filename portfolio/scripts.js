@@ -192,109 +192,113 @@ document.addEventListener('DOMContentLoaded', () => {
     // Testimonial slider functionality
     const testimonialSlider = document.querySelector('.testimonials-slider');
     const testimonialItems = document.querySelectorAll('.testimonial-item');
-    let currentTestimonial = 0;
-    let isAutoSliding = true;
-    let slideInterval;
+    if (testimonialSlider && testimonialItems.length > 0) {
+        let currentTestimonial = 0;
+        let isAutoSliding = true;
+        let slideInterval;
 
-    // Create navigation buttons
-    const testimonialNav = document.createElement('div');
-    testimonialNav.className = 'testimonial-navigation';
-    
-    const prevBtn = document.createElement('button');
-    prevBtn.className = 'testimonial-nav-btn prev';
-    prevBtn.innerHTML = '<i class="fas fa-chevron-left"></i>';
-    
-    const nextBtn = document.createElement('button');
-    nextBtn.className = 'testimonial-nav-btn next';
-    nextBtn.innerHTML = '<i class="fas fa-chevron-right"></i>';
-    
-    testimonialNav.appendChild(prevBtn);
-    testimonialNav.appendChild(nextBtn);
-    testimonialSlider.parentElement.appendChild(testimonialNav);
-
-    function slideTestimonials(direction = 1) {
-        currentTestimonial = (currentTestimonial + direction + testimonialItems.length) % testimonialItems.length;
-        updateTestimonialSlider();
-    }
-
-    function updateTestimonialSlider() {
-        const offset = -(currentTestimonial * (100 / testimonialItems.length));
-        testimonialSlider.style.transform = `translateX(${offset}%)`;
-    }
-
-    // Start auto-sliding
-    function startAutoSlide() {
-        if (slideInterval) clearInterval(slideInterval);
-        slideInterval = setInterval(() => {
-            if (isAutoSliding) {
-                slideTestimonials(1);
-            }
-        }, 5000);
-    }
-
-    // Event listeners for hover pause
-    testimonialSlider.addEventListener('mouseenter', () => {
-        isAutoSliding = false;
-    });
-
-    testimonialSlider.addEventListener('mouseleave', () => {
-        isAutoSliding = true;
-        startAutoSlide();
-    });
-
-    // Navigation button event listeners
-    prevBtn.addEventListener('click', () => {
-        isAutoSliding = false;
-        slideTestimonials(-1);
-        setTimeout(() => {
-            isAutoSliding = true;
-            startAutoSlide();
-        }, 1000);
-    });
-
-    nextBtn.addEventListener('click', () => {
-        isAutoSliding = false;
-        slideTestimonials(1);
-        setTimeout(() => {
-            isAutoSliding = true;
-            startAutoSlide();
-        }, 1000);
-    });
-
-    // Touch events for mobile
-    let touchStartX = 0;
-    let touchEndX = 0;
-
-    testimonialSlider.addEventListener('touchstart', (e) => {
-        touchStartX = e.touches[0].clientX;
-        isAutoSliding = false;
-    });
-
-    testimonialSlider.addEventListener('touchmove', (e) => {
-        touchEndX = e.touches[0].clientX;
-        const diff = touchStartX - touchEndX;
-        const offset = -(currentTestimonial * (100 / testimonialItems.length)) - (diff / testimonialSlider.offsetWidth * 100);
-        testimonialSlider.style.transform = `translateX(${offset}%)`;
-    });
-
-    testimonialSlider.addEventListener('touchend', () => {
-        const swipeDistance = touchEndX - touchStartX;
-        if (Math.abs(swipeDistance) > 50) {
-            if (swipeDistance > 0) {
-                slideTestimonials(-1);
-            } else {
-                slideTestimonials(1);
-            }
-        } else {
-            updateTestimonialSlider(); // Reset to current position if swipe wasn't long enough
+        // Create navigation buttons
+        const testimonialNav = document.createElement('div');
+        testimonialNav.className = 'testimonial-navigation';
+        
+        const prevBtn = document.createElement('button');
+        prevBtn.className = 'testimonial-nav-btn prev';
+        prevBtn.innerHTML = '<i class="fas fa-chevron-left"></i>';
+        
+        const nextBtn = document.createElement('button');
+        nextBtn.className = 'testimonial-nav-btn next';
+        nextBtn.innerHTML = '<i class="fas fa-chevron-right"></i>';
+        
+        testimonialNav.appendChild(prevBtn);
+        testimonialNav.appendChild(nextBtn);
+        if (testimonialSlider.parentElement) {
+            testimonialSlider.parentElement.appendChild(testimonialNav);
         }
-        isAutoSliding = true;
-        startAutoSlide();
-    });
 
-    // Initialize the slider
-    updateTestimonialSlider();
-    startAutoSlide();
+        function slideTestimonials(direction = 1) {
+            currentTestimonial = (currentTestimonial + direction + testimonialItems.length) % testimonialItems.length;
+            updateTestimonialSlider();
+        }
+
+        function updateTestimonialSlider() {
+            const offset = -(currentTestimonial * (100 / testimonialItems.length));
+            testimonialSlider.style.transform = `translateX(${offset}%)`;
+        }
+
+        // Start auto-sliding
+        function startAutoSlide() {
+            if (slideInterval) clearInterval(slideInterval);
+            slideInterval = setInterval(() => {
+                if (isAutoSliding) {
+                    slideTestimonials(1);
+                }
+            }, 5000);
+        }
+
+        // Event listeners for hover pause
+        testimonialSlider.addEventListener('mouseenter', () => {
+            isAutoSliding = false;
+        });
+
+        testimonialSlider.addEventListener('mouseleave', () => {
+            isAutoSliding = true;
+            startAutoSlide();
+        });
+
+        // Navigation button event listeners
+        prevBtn.addEventListener('click', () => {
+            isAutoSliding = false;
+            slideTestimonials(-1);
+            setTimeout(() => {
+                isAutoSliding = true;
+                startAutoSlide();
+            }, 1000);
+        });
+
+        nextBtn.addEventListener('click', () => {
+            isAutoSliding = false;
+            slideTestimonials(1);
+            setTimeout(() => {
+                isAutoSliding = true;
+                startAutoSlide();
+            }, 1000);
+        });
+
+        // Touch events for mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        testimonialSlider.addEventListener('touchstart', (e) => {
+            touchStartX = e.touches[0].clientX;
+            isAutoSliding = false;
+        });
+
+        testimonialSlider.addEventListener('touchmove', (e) => {
+            touchEndX = e.touches[0].clientX;
+            const diff = touchStartX - touchEndX;
+            const offset = -(currentTestimonial * (100 / testimonialItems.length)) - (diff / testimonialSlider.offsetWidth * 100);
+            testimonialSlider.style.transform = `translateX(${offset}%)`;
+        });
+
+        testimonialSlider.addEventListener('touchend', () => {
+            const swipeDistance = touchEndX - touchStartX;
+            if (Math.abs(swipeDistance) > 50) {
+                if (swipeDistance > 0) {
+                    slideTestimonials(-1);
+                } else {
+                    slideTestimonials(1);
+                }
+            } else {
+                updateTestimonialSlider();
+            }
+            isAutoSliding = true;
+            startAutoSlide();
+        });
+
+        // Initialize the slider
+        updateTestimonialSlider();
+        startAutoSlide();
+    }
 
     // Smooth scroll for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
