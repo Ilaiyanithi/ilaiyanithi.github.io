@@ -5,19 +5,15 @@
   Permissions-Policy: geolocation=(), microphone=(), camera=()
 
 # Cache static assets for 1 year immutable
-/assets/*
-  Cache-Control: public, max-age=31536000, immutable
-
 /portfolio/*
   Cache-Control: public, max-age=31536000, immutable
 
-/css/*
-  Cache-Control: public, max-age=31536000, immutable
-
 # HTML documents must revalidate for fresh content updates
+/
+  Cache-Control: public, max-age=0, must-revalidate
+
 /*.html
   Cache-Control: public, max-age=0, must-revalidate
 
 /me/
   Cache-Control: public, max-age=0, must-revalidate
-

@@ -2,12 +2,5 @@
 User-agent: *
 Allow: /
 
-# Disallow internal config directories and non-canonical utility files
-Disallow: /.vscode/
-Disallow: /hari.html
-Disallow: /dharun.html
-Disallow: /sri.html
-
 # Sitemap index location
 Sitemap: https://ilaiyanithi.github.io/sitemap.xml
-
