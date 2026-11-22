@@ -257,3 +257,4 @@ While all on-page, architectural, and server configurations have been programmat
 > Search engines such as Google determine crawl frequency, indexation timelines, and ranking positions based on algorithmic evaluation, search intent, domain authority, and organic signals over time. While all technical barriers, structured data requirements, canonical integrity, performance optimizations, and crawl directives have been implemented in strict adherence to Google Search Central guidelines, **no ethical SEO specialist or tool can guarantee immediate indexing or top-ranking positions**. 
 >
 > Typical indexing for updated static sites on GitHub Pages / Cloudflare Pages takes between 3 to 14 days following sitemap submission and manual URL inspection. Consistent organic backlinks, social engagement via LinkedIn and Instagram, and regular profile citations will accelerate keyword ranking velocity for `Ilaiyanithi V` and related search phrases.
+

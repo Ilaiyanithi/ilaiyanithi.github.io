@@ -10,3 +10,4 @@ Disallow: /sri.html
 
 # Sitemap index location
 Sitemap: https://ilaiyanithi.github.io/sitemap.xml
+
