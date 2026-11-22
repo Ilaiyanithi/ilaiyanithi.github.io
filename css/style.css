@@ -219,7 +219,8 @@ header .get a {
   margin: 0;
 }
 
-.services h1 {
+.services h1,
+.services h2 {
   color: white;
   font-family: "Paytone One", sans-serif;
 }
@@ -267,7 +268,8 @@ header .get a {
 .connect {
   text-align: center;
 }
-.connect h1 {
+.connect h1,
+.connect h2 {
   color: #55e6a5;
   font-family: "Paytone One", sans-serif;
 }
@@ -476,7 +478,8 @@ header .get a {
   color: white; /* Set text color */
   margin-top: 80px;
 }
-.join h1 {
+.join h1,
+.join h2 {
   font-family: "Paytone One", sans-serif;
   font-size: 2.5em;
   color: #55e6a5;
@@ -738,7 +741,8 @@ header .get a {
   .services .icon h3 {
     font-size: 17px;
   }
-  .services h1 {
+  .services h1,
+  .services h2 {
     font-size: 17px;
   }
   .services p {
@@ -774,7 +778,8 @@ header .get a {
     height: auto; /* Maintain aspect ratio */
     margin-top: 10px;
   }
-  .connect h1 {
+  .connect h1,
+  .connect h2 {
     font-size: 20px;
   }
   .connect p {

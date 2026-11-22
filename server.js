@@ -28,6 +28,7 @@ const MIME_TYPES = {
   '.wav': 'audio/wav',
   '.pdf': 'application/pdf',
   '.txt': 'text/plain; charset=utf-8',
+  '.xml': 'application/xml; charset=utf-8',
 };
 
 const server = http.createServer((req, res) => {

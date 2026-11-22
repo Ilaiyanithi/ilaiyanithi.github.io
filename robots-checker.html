@@ -3,15 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Robots.txt Checker</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Robots.txt Checker &amp; Validator Tool | Ilaiyanithi V</title>
+    <meta name="description" content="Free online Robots.txt Checker and Validator tool by Ilaiyanithi V. Inspect website robots.txt files, crawl directives, and Googlebot accessibility in real time.">
+    <meta name="keywords" content="Robots.txt Checker, SEO Crawler Validator, Technical SEO Tool, Ilaiyanithi V">
+    <meta name="author" content="Ilaiyanithi V">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://ilaiyanithi.github.io/robots-checker.html">
+
+    <!-- Open Graph Metadata -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ilaiyanithi.github.io/robots-checker.html">
+    <meta property="og:title" content="Robots.txt Checker &amp; Validator Tool | Ilaiyanithi V">
+    <meta property="og:description" content="Free online Robots.txt Checker and Validator tool by Ilaiyanithi V. Inspect website robots.txt files and crawler directives.">
+    <meta property="og:image" content="https://ilaiyanithi.github.io/portfolio/img/seo-audit-tool.svg">
+    <meta property="og:site_name" content="Ilaiyanithi V SEO Tools">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Robots.txt Checker &amp; Validator Tool | Ilaiyanithi V">
+    <meta name="twitter:description" content="Free online Robots.txt Checker tool by Ilaiyanithi V to test robots.txt directives and Googlebot accessibility.">
+    <meta name="twitter:image" content="https://ilaiyanithi.github.io/portfolio/img/seo-audit-tool.svg">
+
+    <link rel="icon" type="image/x-icon" href="/portfolio/img/favicon.ico">
     <link rel="stylesheet" href="css/robots.css">
+
+    <!-- WebApplication Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Robots.txt Checker Tool",
+      "url": "https://ilaiyanithi.github.io/robots-checker.html",
+      "description": "Free web tool to check whether a website has a valid robots.txt file and verify crawler directives.",
+      "applicationCategory": "SEOApplication",
+      "operatingSystem": "All",
+      "author": {
+        "@type": "Person",
+        "name": "Ilaiyanithi V",
+        "url": "https://ilaiyanithi.github.io/me/"
+      }
+    }
+    </script>
 </head>
 <body>
     <div class="container">
         <h1>Robots.txt Checker</h1>
-        <input type="text" id="urlInput" placeholder="Enter website URL">
-        <button onclick="checkRobotsTxt()">Check</button>
-        <p id="result"></p>
+        <p style="text-align: center; font-size: 14px; margin-bottom: 16px; opacity: 0.85;">
+            Developed by <a href="/me/" style="color: inherit; text-decoration: underline; font-weight: 600;">Ilaiyanithi V</a> (Digital Marketing &amp; Technical SEO Specialist)
+        </p>
+        <input type="text" id="urlInput" placeholder="Enter website URL (e.g. example.com)" aria-label="Website URL">
+        <button onclick="checkRobotsTxt()">Check Robots.txt</button>
+        <p id="result" aria-live="polite"></p>
+        <p style="text-align: center; margin-top: 24px; font-size: 13px;">
+            <a href="/me/" style="color: inherit; text-decoration: none; opacity: 0.7;">&larr; Back to Ilaiyanithi V Portfolio</a>
+        </p>
     </div>
 
     <script>

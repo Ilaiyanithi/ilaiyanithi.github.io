@@ -1,0 +1,3 @@
+# Cloudflare Pages 301 Permanent Redirects to Canonical URLs
+/me.html    /me/    301
+/me         /me/    301
